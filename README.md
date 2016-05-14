@@ -63,6 +63,7 @@ Exemplos de uso da aplicação:
 <br />
 
 > $ curl http://localhost:8080/people
+
 {
   "_links" : {
     "self" : {
@@ -84,6 +85,7 @@ Exemplos de uso da aplicação:
 <br />
 
 > $ curl -i -X POST -H "Content-Type:application/json" -d '{  "firstName" : "Frodo",  "lastName" : "Baggins" }' http://localhost:8080/people
+
 HTTP/1.1 201 Created
 Server: Apache-Coyote/1.1
 Location: http://localhost:8080/people/53149b8e3004990b1af9f229
@@ -93,6 +95,7 @@ Date: Mon, 03 Mar 2014 15:08:46 GMT
 <br />
 
 > $ curl http://localhost:8080/people
+
 {
   "_links" : {
     "self" : {
@@ -125,6 +128,7 @@ Date: Mon, 03 Mar 2014 15:08:46 GMT
 <br />
 
 > $ curl http://localhost:8080/people/53149b8e3004990b1af9f229
+
 {
   "firstName" : "Frodo",
   "lastName" : "Baggins",
