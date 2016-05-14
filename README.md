@@ -56,7 +56,7 @@ Exemplos de uso da aplicação:
   }
 }
 
-<\ br>
+
 > $ curl http://localhost:8080/people
 {
   "_links" : {
@@ -75,6 +75,7 @@ Exemplos de uso da aplicação:
     "number" : 0
   }
 }
+
 
 > $ curl -i -X POST -H "Content-Type:application/json" -d '{  "firstName" : "Frodo",  "lastName" : "Baggins" }' http://localhost:8080/people
 HTTP/1.1 201 Created
@@ -113,6 +114,7 @@ Date: Mon, 03 Mar 2014 15:08:46 GMT
     "number" : 0
   }
 }
+
 
 > $ curl http://localhost:8080/people/53149b8e3004990b1af9f229
 {
