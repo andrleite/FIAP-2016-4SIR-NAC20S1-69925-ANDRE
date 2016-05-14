@@ -8,7 +8,7 @@
 
   Utilizei o micro framework do Spring, _"Spring Boot"_ , pois permite criar aplicações java standalone que são executadas através do comando java -jar, por exemplo, e nesse caso o arquivo jar gerado  irá conter um servidor embarcado como Tomcat, o que é bom para containers.
 
-  Para o build vamos utilizei Gradle.
+  Para o build utilizei Gradle.
 
 ##### Resumindo utilizei:
     - Editor de Texto ou IDE.
