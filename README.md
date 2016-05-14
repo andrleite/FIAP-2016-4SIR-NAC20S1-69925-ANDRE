@@ -13,6 +13,7 @@
 ##### Resumindo utilizei:
     - Editor de Texto ou IDE.
     - JDK 1.8 ou mais novo
+    - mongodb
     - Gradle 2.3+
     - Docker (linux) ou Docker-machine (Mac)
 
@@ -32,7 +33,7 @@ ADD accessing-mongodb-data-rest-0.1.0.jar app.jar
 RUN sh -c 'touch /app.jar'
 ENTRYPOINT ["java","-Dspring.data.mongodb.uri=mongodb://mongodb/person","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
 
-Para aplicação utilizei a imagem padrão alpine-java pois é uma imagem bem leve com jre 8 pois é bem leve. Adicionei o jar em app.jar . Para subir a aplicação utilizei o comando do ENTRYPOINT, passando o nome do container de mongo onde o app vai se conectar.
+Para aplicação utilizei a imagem padrão alpine-java pois é uma imagem bem leve com jre 8 pois é bem leve. Adicionei o jar em app.jar . Para subir a aplicação utilizei o comando no ENTRYPOINT, passando o nome do container de mongo onde o app vai se conectar.
 
 #### build
 
@@ -55,6 +56,7 @@ Exemplos de uso da aplicação:
   }
 }
 
+<\ br>
 > $ curl http://localhost:8080/people
 {
   "_links" : {
