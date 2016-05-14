@@ -58,6 +58,7 @@ Exemplos de uso da aplicação:
     }
   }
 }
+
 <br />
 
 > $ curl http://localhost:8080/people
