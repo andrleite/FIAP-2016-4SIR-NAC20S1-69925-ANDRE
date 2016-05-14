@@ -28,7 +28,7 @@ Para o mongodb basta subir um container com imagem padrão de mongodb.
 
 Subi o o mongo com opção -P expondo suas portas através de portas randômicas passando a imagem mongo.
 
-Em **src/main/docker** criei o Dockerfile para imagem de docker
+Em _src/main/docker_ criei o **Dockerfile** para imagem de docker
 
 >  FROM anapsix/alpine-java:jre8
 VOLUME /tmp
@@ -36,11 +36,11 @@ ADD accessing-mongodb-data-rest-0.1.0.jar app.jar
 RUN sh -c 'touch /app.jar'
 ENTRYPOINT ["java","-Dspring.data.mongodb.uri=mongodb://mongodb/person","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
 
-Para aplicação utilizei a imagem padrão alpine-java pois é uma imagem bem leve com jre 8 pois é bem leve. Adicionei o jar em app.jar . Para subir a aplicação utilizei o comando no ENTRYPOINT, passando o nome do container de mongo onde o app vai se conectar.
+Para aplicação utilizei a imagem padrão alpine-java pois é uma imagem bem leve com jre 8. Adicionei o jar em app.jar. Para subir a aplicação utilizei o comando jar no  ENTRYPOINT, passando o nome do container de mongo onde o app vai se conectar, conforme mostrado acima.
 
 #### build
 
-<code>build buildDocker</code>
+<code>gradle build buildDocker</code>
 
 Subindo applicação
 <code>docker run -p 8080:8080 -d --name restapp --link mongodb:mongodb andrleite/fiap-2016-4sir-nac20s1-69925-andre</code>
