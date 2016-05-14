@@ -50,6 +50,7 @@ Exemplos de uso da aplicação:
 **Para Mac o ip é do Docker-machine ao invés de localhost**
 
 > $ curl http://localhost:8080
+
 {
   "_links" : {
     "people" : {
