@@ -38,14 +38,14 @@ ENTRYPOINT ["java","-Dspring.data.mongodb.uri=mongodb://mongodb/person","-Djava.
 
 Para aplicação utilizei a imagem padrão alpine-java pois é uma imagem bem leve com jre 8. Adicionei o jar em app.jar. Para subir a aplicação utilizei o comando jar no  ENTRYPOINT, passando o nome do container de mongo onde o app vai se conectar, conforme mostrado acima.
 
-#### build
+#### Build
 
 <code>gradle build buildDocker</code>
 
 Subindo applicação
 <code>docker run -p 8080:8080 -d --name restapp --link mongodb:mongodb andrleite/fiap-2016-4sir-nac20s1-69925-andre</code>
 
-Exemplos de uso da aplicação:
+#### Exemplos de uso da aplicação:
 
 **Para Mac o ip é do Docker-machine ao invés de localhost**
 
