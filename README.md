@@ -42,6 +42,7 @@ Subindo applicação
 <code>docker run -p 8080:8080 -d --name restapp --link mongodb:mongodb andrleite/fiap-2016-4sir-nac20s1-69925-andre</code>
 
 Exemplos de uso da aplicação:
+
 **Para Mac o ip é do Docker-machine ao invés de localhost**
 
 > $ curl http://localhost:8080
